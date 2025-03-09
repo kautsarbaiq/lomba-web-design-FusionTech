@@ -18,16 +18,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 45%;
-  background: rgba(31, 41, 55, 0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
   border-radius: 0 0 25px 25px;
   padding: 12px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
-    inset 0 0 1px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1),
+    inset 0 0 2px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-top: none;
   z-index: 50;
 }
@@ -49,44 +49,59 @@ body {
 }
 
 .nav-links li a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   padding: 6px 14px;
-  border-radius: 18px;
   transition: all 0.3s ease;
   position: relative;
   text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid transparent;
 }
 
 .nav-links li a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #4f46e5, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
   transform: translateX(-50%);
-  transition: width 0.3s ease;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
+  transition: width 0.4s ease;
 }
 
 .nav-links li a:hover {
   color: #ffffff;
-  text-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
 }
 
+.nav-links li a:hover::after {
+  width: 80%;
+}
+
 .nav-links li a.active {
-  background: rgba(79, 70, 229, 0.1);
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links li a:active {
+  transform: scale(0.95) translateY(0);
+  transition: all 0.1s ease;
 }
 
 .nav-button {
