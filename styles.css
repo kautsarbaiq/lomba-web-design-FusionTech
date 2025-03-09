@@ -7,26 +7,28 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: black;
+  background-color: #0a0a0a;
   color: white;
 }
 
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 8px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 65%;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 9999px;
-  padding: 12px 24px;
+  width: 45%;
+  background: rgba(31, 41, 55, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 25px 25px;
+  padding: 12px 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: none;
   z-index: 50;
 }
 
@@ -38,25 +40,74 @@ body {
   text-decoration: none;
 }
 
-.nav-menu {
+.nav-links {
   display: flex;
   gap: 2.5rem;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: white;
-  font-size: 1.125rem;
-  font-weight: 500;
+.nav-links li a {
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  transition: color 0.3s;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
 }
 
-.nav-item:hover {
-  color: #f87171;
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4f46e5, transparent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav-links li a.active {
+  background: rgba(79, 70, 229, 0.1);
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+}
+
+.nav-button {
+  position: absolute;
+  left: -80px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
 }
 
 .nav-icon {
@@ -193,7 +244,27 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #8b0000, #8b0000, black);
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e1b4b 25%,
+    #312e81 50%,
+    #1e1b4b 75%,
+    #0f172a 100%
+  );
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* 3D Model */
@@ -224,21 +295,23 @@ model-viewer {
   font-size: 9.5rem;
   font-weight: 900;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), -1px -1px 0 #fff, 1px -1px 0 #fff,
-    -1px 1px 0 #fff, 1px 1px 0 #fff;
+  background: linear-gradient(to right, #fff, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 20px rgba(79, 70, 229, 0.3);
   opacity: 0;
   animation: fadeInDown 1s forwards;
   letter-spacing: -2px;
   line-height: 0.9;
-  webkit-text-stroke: 1px white;
   margin-top: 100px;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #94a3b8;
   margin-bottom: 20px;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
   opacity: 0;
   animation: fadeInUp 1s forwards;
   font-weight: 700;
@@ -248,21 +321,21 @@ model-viewer {
   display: inline-block;
   font-size: 1rem;
   font-weight: bold;
-  color: black;
-  background: linear-gradient(to bottom, white, red);
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
   padding: 12px 24px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
   opacity: 0;
   animation: fadeIn 1s forwards;
-  transition: transform 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .shop-btn:hover {
   transform: scale(1.05);
-  color: white;
-  background: red;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 0 30px rgba(79, 70, 229, 0.5);
 }
 
 /* Animations */

@@ -36,14 +36,24 @@
             <!-- Text Content -->
             <div class="hero-text">
                 <h1>GURU AI PRIBADI
-                    PENDIDI KAN
-                    MASA
-                    DEPAN
-                    ANDA</h1>
+                    <span>PENDIDIKAN</span>
+                    <span>MASA DEPAN</span>
+                    <span>ANDA</span>
+                </h1>
+                <p>Belajar lebih pintar dengan AI</p>
                 <a href="#" class="shop-btn">Mulai Belajar</a>
             </div>
         </section>
     </main>
+
+    <script>
+        const toggleSearchButton = document.getElementById('toggleSearch');
+        const searchForm = document.getElementById('searchForm');
+
+        toggleSearchButton?.addEventListener('click', () => {
+            searchForm.classList.toggle('active');
+        });
+    </script>
 
 </body>
 
