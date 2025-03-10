@@ -51,7 +51,48 @@
                 <div>
                     <h1>CONQUER THE FUTURE.
                     </h1>
-                    <a href="#" class="shop-btn">Mulai Belajar</a>
+
+                    <div class="hero-small-cards">
+                        <div class="left-cards">
+                            <!-- Card 1 -->
+                            <div class="hero-small-card">
+                                <div class="card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-number">100.000.000</span>
+                                    <span class="card-text">orang mengunduh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="shop-btn">Mulai Belajar</a>
+
+                        <div class="right-cards">
+                            <!-- Card 2 -->
+                            <div class="hero-small-card">
+                                <div class="card-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-number">4.8</span>
+                                    <span class="card-text">Kepuasan Pelanggan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -78,6 +119,76 @@
                     this.classList.add('active');
                     this.style.setProperty('--after-width', '100%');
                 });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.querySelector('.cards-container');
+            let scrollAmount = 0;
+            const scrollSpeed = 1.5;
+            let isHovered = false;
+
+            function autoScroll() {
+                if (!isHovered) {
+                    scrollAmount += scrollSpeed;
+
+                    // Jika mencapai akhir, kembali ke awal
+                    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+                        // Animasi smooth kembali ke awal
+                        container.style.scrollBehavior = 'auto';
+                        scrollAmount = 0;
+                        container.scrollLeft = 0;
+                        setTimeout(() => {
+                            container.style.scrollBehavior = 'smooth';
+                        }, 50);
+                    } else {
+                        container.scrollLeft = scrollAmount;
+                    }
+                }
+                requestAnimationFrame(autoScroll);
+            }
+
+            // Start auto-scrolling
+            autoScroll();
+
+            // Handle mouse interactions
+            container.addEventListener('mouseenter', () => {
+                isHovered = true;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isHovered = false;
+            });
+
+            // Handle manual scrolling
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                container.style.cursor = 'grabbing';
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDown = false;
+                container.style.cursor = 'grab';
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2;
+                container.scrollLeft = scrollLeft - walk;
+                scrollAmount = container.scrollLeft;
             });
         });
     </script>
@@ -109,18 +220,15 @@
                     <p class="card-desc">
                         membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
                     </p>
-                    <p class="card-desc">
-                        berguna untuk memastikan keaslian dan kualitas tulisan.
-                    </p>
                     <div class="card-image">
                         <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="teacher-card card-featured">
+                <div class="teacher-card">
                     <div class="card-header">
-                        <h3>QUILLBOT</h3>
+                        <h3>CHATGPT</h3>
                         <a href="#" class="card-link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -130,20 +238,17 @@
                         </a>
                     </div>
                     <p class="card-desc">
-                        membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
-                    </p>
-                    <p class="card-desc">
-                        berguna untuk memastikan keaslian dan kualitas tulisan.
+                        AI pintar yang dapat membantu dalam pembelajaran dan menjawab berbagai pertanyaan.
                     </p>
                     <div class="card-image">
-                        <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
+                        <img src="./img/robot.png" alt="AI Teacher - ChatGPT" class="robot-image">
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="teacher-card">
                     <div class="card-header">
-                        <h3>QUILLBOT</h3>
+                        <h3>MIDJOURNEY</h3>
                         <a href="#" class="card-link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -153,13 +258,110 @@
                         </a>
                     </div>
                     <p class="card-desc">
-                        membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
-                    </p>
-                    <p class="card-desc">
-                        berguna untuk memastikan keaslian dan kualitas tulisan.
+                        Menghasilkan gambar berkualitas tinggi dari deskripsi teks.
                     </p>
                     <div class="card-image">
-                        <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Midjourney" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>DALL-E</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Membuat gambar kreatif dari deskripsi teks dengan teknologi AI.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - DALL-E" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>STABLE DIFFUSION</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Menghasilkan gambar AI dengan kustomisasi yang lebih mendalam.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Stable Diffusion" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>BARD</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Asisten AI dari Google untuk membantu berbagai tugas kreatif.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Bard" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>CLAUDE</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        AI canggih untuk analisis dan pemecahan masalah kompleks.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Claude" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>COPILOT</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Asisten coding AI untuk membantu pengembangan software.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Copilot" class="robot-image">
                     </div>
                 </div>
             </div>
