@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guru AI</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Import model-viewer component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -26,47 +30,141 @@
             <!-- Background Gradient -->
             <div class="hero-bg"></div>
 
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="floating-circle c1"></div>
+                <div class="floating-circle c2"></div>
+                <div class="floating-circle c3"></div>
+            </div>
+
             <!-- 3D Model -->
-            <div class="model-container">
-                <model-viewer src="/public/img/solder.glb" alt="3D Head Model" auto-rotate loading="lazy"
-                    camera-orbit="0deg 80deg 0.5m" camera-target="0m 1.6m 0m" field-of-view="20deg">
+            <div class="model-container" style="top: 65%">
+                <model-viewer src="./img/humanoid.glb" alt="Model 3D Humanoid" auto-rotate disable-zoom
+                    camera-orbit="0deg 75deg 105%" min-camera-orbit="auto auto 105%" max-camera-orbit="auto auto 105%"
+                    rotation-per-second="5deg" exposure="1" shadow-intensity="1" shadow-softness="1"
+                    environment-image="neutral">
                 </model-viewer>
             </div>
 
             <!-- Text Content -->
             <div class="hero-text">
                 <div>
-                    <h1>GURU AI PRIBADI
-                        <span>PENDIDIKAN</span>
-                        <span>MASA DEPAN</span>
-                        <span>ANDA</span>
+                    <h1>CONQUER THE FUTURE.
                     </h1>
-                    <p>Belajar lebih pintar dengan AI</p>
                     <a href="#" class="shop-btn">Mulai Belajar</a>
                 </div>
-                <div class="glass-card"></div>
             </div>
         </section>
     </main>
 
+    <!-- JavaScript -->
     <script>
-        const toggleSearchButton = document.getElementById('toggleSearch');
-        const searchForm = document.getElementById('searchForm');
-        const navLinks = document.querySelectorAll('.nav-links li a');
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.nav-links li a');
 
-        toggleSearchButton?.addEventListener('click', () => {
-            searchForm.classList.toggle('active');
-        });
+            // Set home sebagai active default
+            const homeLink = document.querySelector('.nav-links li a[href="#"]');
+            if (homeLink) homeLink.classList.add('active');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Hapus class active dari semua link
-                navLinks.forEach(l => l.classList.remove('active'));
-                // Tambahkan class active ke link yang diklik
-                e.target.classList.add('active');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // Hapus class active dari semua link
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                        l.style.setProperty('--after-width', '0');
+                    });
+
+                    // Tambah class active ke link yang diklik
+                    this.classList.add('active');
+                    this.style.setProperty('--after-width', '100%');
+                });
             });
         });
     </script>
+
+
+
+    <!-- section 2 -->
+    <section class="teacher-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>MEET OUR AI <span class="highlight">TEACHER!</span></h2>
+                <div class="underline"></div>
+                <a href="#" class="more-btn">LET'S SEE MORE</a>
+            </div>
+
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>QUILLBOT</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
+                    </p>
+                    <p class="card-desc">
+                        berguna untuk memastikan keaslian dan kualitas tulisan.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="teacher-card card-featured">
+                    <div class="card-header">
+                        <h3>QUILLBOT</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
+                    </p>
+                    <p class="card-desc">
+                        berguna untuk memastikan keaslian dan kualitas tulisan.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>QUILLBOT</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
+                    </p>
+                    <p class="card-desc">
+                        berguna untuk memastikan keaslian dan kualitas tulisan.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 
