@@ -18,9 +18,10 @@
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Course</a></li>
-            <li><a href="#">Testimoni</a></li>
+            <li><a href="#">AI Chat</a></li>
+            <li><a href="#">Akun</a></li>
+            <li><a href="#">Setting</a></li>
+
         </ul>
     </nav>
 
@@ -124,47 +125,11 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const container = document.querySelector('.cards-container');
-            let scrollAmount = 0;
-            const scrollSpeed = 1.5;
-            let isHovered = false;
-
-            function autoScroll() {
-                if (!isHovered) {
-                    scrollAmount += scrollSpeed;
-
-                    // Jika mencapai akhir, kembali ke awal
-                    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-                        // Animasi smooth kembali ke awal
-                        container.style.scrollBehavior = 'auto';
-                        scrollAmount = 0;
-                        container.scrollLeft = 0;
-                        setTimeout(() => {
-                            container.style.scrollBehavior = 'smooth';
-                        }, 50);
-                    } else {
-                        container.scrollLeft = scrollAmount;
-                    }
-                }
-                requestAnimationFrame(autoScroll);
-            }
-
-            // Start auto-scrolling
-            autoScroll();
-
-            // Handle mouse interactions
-            container.addEventListener('mouseenter', () => {
-                isHovered = true;
-            });
-
-            container.addEventListener('mouseleave', () => {
-                isHovered = false;
-            });
-
-            // Handle manual scrolling
             let isDown = false;
             let startX;
             let scrollLeft;
 
+            // Handle manual scrolling
             container.addEventListener('mousedown', (e) => {
                 isDown = true;
                 container.style.cursor = 'grabbing';
@@ -188,14 +153,47 @@
                 const x = e.pageX - container.offsetLeft;
                 const walk = (x - startX) * 2;
                 container.scrollLeft = scrollLeft - walk;
-                scrollAmount = container.scrollLeft;
             });
         });
     </script>
 
-
-
     <!-- section 2 -->
+
+    <section class="ai-power-showcase">
+        <div class="section-header">
+            <h2>TOP AI AGEN</h2>
+        </div>
+        <div class="showcase-grid">
+            <!-- Card 1 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="./img/robot.png" alt="TOP AI AGEN">
+                </div>
+                <h3 class="showcase-title">TOP AI AGEN</h3>
+                <a href="#" class="showcase-button">LET'S SEE MORE</a>
+            </div>
+
+            <!-- Card 2 (Featured/Larger) -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="./img/robot.png" alt="TOP AI AGEN">
+                </div>
+                <h3 class="showcase-title">TOP AI AGEN</h3>
+                <a href="#" class="showcase-button">LET'S SEE MORE</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="showcase-card">
+                <div class="showcase-image">
+                    <img src="./img/robot.png" alt="TOP AI AGEN">
+                </div>
+                <h3 class="showcase-title">TOP AI AGEN</h3>
+                <a href="#" class="showcase-button">LET'S SEE MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 3-->
     <section class="teacher-section">
         <div class="section-container">
             <div class="section-header">
@@ -362,6 +360,47 @@
                     </p>
                     <div class="card-image">
                         <img src="./img/robot.png" alt="AI Teacher - Copilot" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Additional Cards -->
+                <!-- Card 9 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>NEW AI 1</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Deskripsi untuk AI baru 1.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - New AI 1" class="robot-image">
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="teacher-card">
+                    <div class="card-header">
+                        <h3>NEW AI 2</h3>
+                        <a href="#" class="card-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="card-desc">
+                        Deskripsi untuk AI baru 2.
+                    </p>
+                    <div class="card-image">
+                        <img src="./img/robot.png" alt="AI Teacher - New AI 2" class="robot-image">
                     </div>
                 </div>
             </div>
