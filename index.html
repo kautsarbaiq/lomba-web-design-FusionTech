@@ -99,66 +99,93 @@
         </section>
     </main>
 
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('.nav-links li a');
 
-            // Set home sebagai active default
-            const homeLink = document.querySelector('.nav-links li a[href="#"]');
-            if (homeLink) homeLink.classList.add('active');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    // Hapus class active dari semua link
-                    navLinks.forEach(l => {
-                        l.classList.remove('active');
-                        l.style.setProperty('--after-width', '0');
-                    });
-
-                    // Tambah class active ke link yang diklik
-                    this.classList.add('active');
-                    this.style.setProperty('--after-width', '100%');
-                });
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.cards-container');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            // Handle manual scrolling
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                container.style.cursor = 'grabbing';
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-            });
-
-            container.addEventListener('mouseleave', () => {
-                isDown = false;
-                container.style.cursor = 'grab';
-            });
-
-            container.addEventListener('mouseup', () => {
-                isDown = false;
-                container.style.cursor = 'grab';
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 2;
-                container.scrollLeft = scrollLeft - walk;
-            });
-        });
-    </script>
 
     <!-- section 2 -->
+    <section class="quantum_section">
 
+
+        <div class="cyber_bg"></div>
+        <div class="grid_lines"></div>
+
+        <div class="content_wrapper">
+            <div class="neo_container">
+                <h1 class="alpha_heading">ABOUT <span class="alpha_heading-US"> US</span></h1>
+
+                <div class="quantum_grid">
+                    <div class="cyber_card">
+                        <div class="pulse_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                            </svg>
+                        </div>
+                        <h2 class="neon_title">TEXT ABOUT US NYA</h2>
+                        <p class="ghost_text">Exploring the frontiers of technological innovation, our team combines
+                            cutting-edge AI research with practical applications to revolutionize how humans and
+                            machines interact.</p>
+                        <a href="#" class="expand_link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l10-10M7 7h10v10" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dual_grid">
+                    <div class="cyber_card">
+                        <div class="pulse_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                            </svg>
+                        </div>
+                        <h2 class="neon_title">TEXT ABOUT US NYA</h2>
+                        <p class="ghost_text">Our mission is to create intelligent systems that augment human
+                            capabilities while ensuring ethical AI development and deployment.</p>
+                        <a href="#" class="expand_link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l10-10M7 7h10v10" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="cyber_card">
+                        <div class="pulse_icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                            </svg>
+                        </div>
+                        <h2 class="neon_title">TEXT ABOUT US NYA</h2>
+                        <p class="ghost_text">With a focus on robotic integration and neural interface technologies,
+                            we're building the foundation for the next generation of human-machine collaboration.</p>
+                        <a href="#" class="expand_link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M7 17l10-10M7 7h10v10" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="model_wrapper">
+            <div class="model_container">
+                <div class="model_glow"></div>
+                <!-- 3D Model Viewer using Google's model-viewer -->
+                <model-viewer src="./img/humanoid.glb"
+                    alt="A 3D model of a robot"  auto-rotate shadow-intensity="1"
+                    environment-image="neutral" exposure="0.8">
+                </model-viewer>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 3-->
     <section class="ai-power-showcase">
         <div class="section-header">
             <h2>TOP AI AGEN</h2>
@@ -193,7 +220,9 @@
         </div>
     </section>
 
-    <!-- section 3-->
+
+
+    <!-- section 4 -->
     <section class="teacher-section">
         <div class="section-container">
             <div class="section-header">
@@ -407,6 +436,66 @@
         </div>
     </section>
 
+
+
 </body>
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.nav-links li a');
+
+        // Set home sebagai active default
+        const homeLink = document.querySelector('.nav-links li a[href="#"]');
+        if (homeLink) homeLink.classList.add('active');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Hapus class active dari semua link
+                navLinks.forEach(l => {
+                    l.classList.remove('active');
+                    l.style.setProperty('--after-width', '0');
+                });
+
+                // Tambah class active ke link yang diklik
+                this.classList.add('active');
+                this.style.setProperty('--after-width', '100%');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const container = document.querySelector('.cards-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        // Handle manual scrolling
+        container.addEventListener('mousedown', (e) => {
+            isDown = true;
+            container.style.cursor = 'grabbing';
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+    });
+</script>
+
 
 </html>
