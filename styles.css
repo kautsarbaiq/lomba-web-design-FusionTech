@@ -354,12 +354,12 @@ model-viewer::part(default-progress-mask) {
 }
 
 .shop-btn {
-  margin-top: 10rem;
+  margin-top: 6rem;
   display: inline-block;
   font-size: 1.1rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(135deg, #000000, #333333);
+  background: linear-gradient(135deg,rgb(0, 0, 0), #333333);
   padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;
@@ -368,6 +368,7 @@ model-viewer::part(default-progress-mask) {
   animation: fadeIn 1s forwards;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .shop-btn:hover {
@@ -489,14 +490,14 @@ model-viewer::part(default-progress-mask) {
   font-weight: 900;
   letter-spacing: -2px;
   margin-bottom: 50px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   position: relative;
-  text-shadow: 0 0 15px rgb(131, 131, 131);
+  text-shadow: 0 0 15px rgba(60, 60, 60, 0.91);
 }
 
 .alpha_heading-US {
-  color: rgb(255, 255, 255);
+  color: rgb(6, 0, 0);
 }
 
 /* Background Effect */
@@ -774,9 +775,8 @@ model-viewer::part(default-progress-mask) {
 }
 
 .ai-power-showcase .section-header h2 {
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 800;
-  background: linear-gradient(to right, #000000, #333333);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -796,7 +796,6 @@ model-viewer::part(default-progress-mask) {
   transform: translateX(-50%);
   width: 150px;
   height: 4px;
-  background: linear-gradient(to right, #000000, #333333);
   border-radius: 2px;
 }
 
@@ -985,7 +984,7 @@ model-viewer::part(default-progress-mask) {
 .underline {
   position: absolute;
   bottom: -10px;
-  right: 43%;
+  right: 20%;
   transform: translateX(-40%);
   height: 4px;
   width: 40%;

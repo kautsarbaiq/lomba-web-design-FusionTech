@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">AI Chat</a></li>
+            <li><a href="#">Akun</a></li>
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </nav>
+
+    <style>
+        /* Reset & Global */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+    
+        body {
+          background-color: #fff;
+          color: #333;
+        }
+    
+        /* NAVBAR - no special styling */
+        nav.navbar {
+          padding: 1rem;
+          background-color: transparent;
+        }
+    
+        /* Container for the login section */
+        .login-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 4rem 2rem;
+        }
+    
+        /* Left side (text + form) */
+        .login-left {
+          flex: 1;
+          max-width: 600px;
+        }
+    
+        .welcome-title {
+          font-size: 4rem;
+          font-weight: 900;
+          margin-bottom: 2rem;
+          position: relative;
+        }
+    
+        /* Optional underline effect if needed
+        .welcome-title::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 70px;
+          height: 4px;
+          background-color: #007bff; 
+        } */
+    
+        /* Input group wrapper */
+        .input-group {
+          position: relative;
+          margin-bottom: 1.5rem;
+        }
+    
+        .input-group input {
+          width: 100%;
+          padding: 1.2rem 3rem 1.2rem 3rem; /* top right bottom left */
+          border: none;
+          border-radius: 10px;
+          background-color: #fff;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+          font-size: 1rem;
+          color: #333;
+        }
+    
+        .input-group input::placeholder {
+          color: #777;
+        }
+    
+        /* Ikon bintang di sebelah kiri */
+        .icon-star {
+          position: absolute;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #a855f7; /* ungu */
+          font-size: 1.2rem;
+        }
+    
+        /* Ikon panah di sebelah kanan */
+        .icon-arrow {
+          position: absolute;
+          right: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #777;
+          font-size: 1rem;
+        }
+    
+        /* Tombol Create Account */
+        .create-account-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 1.2rem;
+          margin-top: 1rem;
+          border: none;
+          border-radius: 10px;
+          background-color: #000;
+          color: #fff;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .create-account-btn:hover {
+          background-color: #333;
+          transform: translateY(-2px);
+        }
+    
+        .create-account-btn .icon-star-btn {
+          margin-right: 0.5rem;
+          color: #a855f7;
+          font-size: 1.2rem;
+        }
+    
+        /* Teks 'Or sign up with' */
+        .or-text {
+          margin: 1.5rem 0 1rem;
+          text-align: center;
+          font-size: 0.95rem;
+          color: #666;
+        }
+    
+        /* Social icons wrapper */
+        .social-login {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+    
+        .social-login a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          background-color: #f9f9f9;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          font-size: 1.2rem;
+          text-decoration: none;
+          color: #333;
+          transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+    
+        .social-login a:hover {
+          transform: translateY(-3px);
+          background-color: #eee;
+        }
+    
+        /* Right side (robot model or image) */
+        .login-right {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+        /* Model viewer styling (jika pakai 3D model) */
+        .model-viewer {
+          width: 350px;
+          height: 500px;
+          /* Agar latar belakang model-nya putih */
+          --poster-color: transparent;
+          background-color: transparent;
+        }
+    
+        /* Optional: jika pakai <img> untuk robot
+        .robot-img {
+          width: 400px;
+          object-fit: cover;
+        }
+        */
+    
+        /* Responsiveness */
+        @media (max-width: 992px) {
+          .login-container {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .login-right {
+            margin-top: 2rem;
+          }
+        }
+    
+        @media (max-width: 576px) {
+          .welcome-title {
+            font-size: 3rem;
+          }
+          .input-group input {
+            padding: 1rem 2.5rem;
+          }
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- Navbar (no special styling) -->
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">AI Chat</a></li>
+          <li><a href="#">Akun</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    
+      <!-- LOGIN SECTION -->
+      <section class="login-container">
+        <!-- Left side -->
+        <div class="login-left">
+          <h1 class="welcome-title">WELCOME</h1>
+    
+          <!-- Email -->
+          <div class="input-group">
+            <span class="icon-star">&#10022;</span>
+            <input type="text" placeholder="Email Address" />
+            <span class="icon-arrow">&#8594;</span>
+          </div>
+    
+          <!-- Password -->
+          <div class="input-group">
+            <span class="icon-star">&#10022;</span>
+            <input type="password" placeholder="Password Email" />
+            <span class="icon-arrow">&#8594;</span>
+          </div>
+    
+          <!-- Button -->
+          <button class="create-account-btn">
+            <span class="icon-star-btn">&#10022;</span>
+            Create Account
+          </button>
+    
+          <!-- Or sign up with -->
+          <p class="or-text">Or sign up with</p>
+          <div class="social-login">
+            <a href="#" title="Google">G</a>
+            <a href="#" title="Email">&#9993;</a>
+            <a href="#" title="Apple">&#63743;</a>
+          </div>
+        </div>
+    
+        <!-- Right side (robot model) -->
+        <div class="login-right">
+          <!-- Jika pakai 3D model -->
+          <model-viewer
+            src="./img/humanoid.glb"
+            alt="3D Robot"
+            auto-rotate
+            camera-controls
+            class="model-viewer"
+          ></model-viewer>
+        </div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</body>
+</html>
