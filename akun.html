@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">AI Chat</a></li>
+            <li><a href="akun.html">Akun</a></li>
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <section class="profile-section">
+            <div class="profile-container">
+              <!-- Background Pattern SVG -->
+              <div class="bg-pattern">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800" preserveAspectRatio="none">
+                  <defs>
+                    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(230, 230, 230, 0.5)" stroke-width="1" />
+                    </pattern>
+                    <linearGradient id="profile-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="rgba(245, 245, 245, 0.7)" />
+                      <stop offset="100%" stop-color="rgba(250, 250, 250, 0.9)" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+                  <rect width="100%" height="100%" fill="url(#profile-gradient)" />
+                </svg>
+              </div>
+          
+              <!-- Profile Card -->
+              <div class="profile-card">
+                <!-- Edit Icon -->
+                <div class="edit-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path d="M15.7279 9.57629L14.3137 8.16207L5 17.4758V18.89H6.41421L15.7279 9.57629ZM17.1421 8.16207L18.5563 6.74786L17.1421 5.33365L15.7279 6.74786L17.1421 8.16207ZM7.24264 20.89H3V16.6474L16.435 3.21233C16.8256 2.8218 17.4587 2.8218 17.8492 3.21233L20.6777 6.04075C21.0682 6.43128 21.0682 7.06444 20.6777 7.45497L7.24264 20.89Z" fill="currentColor"/>
+                  </svg>
+                </div>
+          
+                <!-- Profile Header -->
+                <div class="profile-header">
+                  <div class="profile-avatar">
+                    <div class="avatar-border">
+                      <img src="https://api.dicebear.com/7.x/micah/svg?seed=PujiBaiqun" alt="Puji Baiqun" class="avatar-image">
+                    </div>
+                    <div class="online-status"></div>
+                  </div>
+                  <div class="profile-info">
+                    <h1 class="profile-name">Puji Baiqun</h1>
+                    <p class="profile-username">@pijbqun</p>
+                    <div class="profile-join-date">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                        <path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z" fill="currentColor"/>
+                      </svg>
+                      <span>Bergabung Agustus 2020</span>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Profile Stats -->
+                <div class="profile-stats">
+                  <div class="stat-item">
+                    <span class="stat-value">0</span>
+                    <span class="stat-label">Text</span>
+                  </div>
+                  <div class="stat-divider"></div>
+                  <div class="stat-item">
+                    <span class="stat-value">0</span>
+                    <span class="stat-label">Text</span>
+                  </div>
+                </div>
+          
+                <!-- Analytics Section -->
+                <h2 class="section-title">Statistik</h2>
+                <div class="analytics-grid">
+                  <div class="analytics-card">
+                    <div class="analytics-icon fire">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 23C16.4183 23 20 19.4183 20 15C20 13.9587 19.7947 12.9657 19.4223 12.0489C18.4654 13.4937 16.8523 14.5 15 14.5C11.9624 14.5 9.5 12.0376 9.5 9C9.5 6.08262 11.5596 3.66139 14.2855 3.06969C13.5904 3.02349 12.8808 3 12.1628 3C11.9606 3 11.7583 3.00379 11.556 3.01102C8.83061 3.11096 6.44196 4.75 5.31918 7.08242C4.56326 6.15994 4.09975 5.00073 4.01549 3.72993C1.55332 6.05396 0 9.36003 0 13C0 18.5228 4.47715 23 10 23C10.385 23 10.7654 22.9778 11.1399 22.9343C10.4165 22.3589 10 21.4704 10 20.5C10 18.567 11.567 17 13.5 17C15.433 17 17 18.567 17 20.5C17 21.7993 16.1596 22.9037 15 23C15.5062 22.6462 16 22.2458 16.465 21.8017C17.131 21.1222 16.7438 21.861 17.3419 21.1421C17.6786 20.7439 17.9768 20.3136 18.2329 19.857C19.3529 17.8107 20 15.4758 20 13C20 11.5373 19.7366 10.1323 19.2498 8.82539C18.4105 11.0359 16.3212 12.5982 13.8542 12.9232C15.7395 12.7628 17.2783 11.2615 17.4933 9.37738C17.4977 9.33975 17.5 9.30142 17.5 9.26245V9C17.5 6.51472 15.4853 4.5 13 4.5C10.5147 4.5 8.5 6.51472 8.5 9C8.5 11.4853 10.5147 13.5 13 13.5C14.9312 13.5 16.5926 12.2485 17.2168 10.5116C16.8606 12.263 15.3329 13.5 13.5 13.5C11.2909 13.5 9.5 11.7091 9.5 9.5C9.5 7.29086 11.2909 5.5 13.5 5.5C15.7091 5.5 17.5 7.29086 17.5 9.5V9.26245C17.5 6.35594 15.1376 4 12.2245 4C9.31129 4 6.94891 6.35594 6.94891 9.26245C6.94891 12.169 9.31129 14.5249 12.2245 14.5249C12.6443 14.5249 13.0532 14.4786 13.4461 14.3915C11.8101 15.7471 9.53339 16.2614 6.81905 15.3911C7.08657 16.1312 7.44055 16.8381 7.87332 17.5C5.20108 16.146 3.91832 14.1342 3.5492 11.187C3.67209 14.9347 5.99991 18.1562 9.42513 19.5535C9.14653 19.9046 8.98578 20.3354 8.98578 20.8C8.98578 21.5 9.48578 22 10.1858 22C10.8858 22 11.1858 21.5 11.1858 20.8C11.1858 19.4 12.7762 18 13.5 18C14.2238 18 15.1858 18.9 15.1858 20.3C15.1858 21.7 14.2238 22 13.5 22C13.2 22 12.1858 22 12.1858 21C12.1858 20.4477 11.7381 20 11.1858 20C10.6335 20 10.1858 20.4477 10.1858 21C10.1858 22.5 11.5 23 13 23C12.6673 23 12.3368 22.9823 12.009 22.9477C16.4388 22.7913 20 19.1264 20 14.6667C20 14.4444 19.9911 14.2239 19.9736 14.0053C21.264 13.2584 22 11.7638 22 10V10C22 11.6357 20.8889 13.0179 19.0974 13.4986C18.3847 17.2298 15.1043 20 11.1858 20C9.75432 20 8.41247 19.594 7.27765 18.8911C7.20549 18.8447 7.13408 18.7971 7.06345 18.7484C9.98653 20.4217 13.7903 19.9951 16.0899 17.6992C12.9447 19.9822 8.91477 19.0152 6.63193 15.9879C4.95233 13.7171 4.9813 10.8436 6.44499 8.44213C6.63302 8.14993 6.83876 7.87607 7.05981 7.62062C8.37445 5.8966 10.4917 4.81518 12.8595 4.95245C12.9331 4.95754 13.0063 4.9635 13.0792 4.97033C16.5607 5.25854 19.1858 8.13498 19.1858 11.6667C19.1858 15.3486 16.1953 18.3333 12.5 18.3333C12.0889 18.3333 11.6842 18.3007 11.2895 18.2375C14.7001 18.7125 17.8078 16.7178 19.1039 13.5149C19.6778 12.3828 20 11.1038 20 9.75927C20 5.50304 16.5376 2.04926 12.2728 2.04926C8.56517 2.04926 5.44922 4.64409 4.6299 8.1375C4.9271 7.4581 5.33157 6.83368 5.82209 6.2946C5.50391 6.68779 5.22403 7.11114 4.98531 7.55941C5.56089 6.74311 6.28587 6.04444 7.11224 5.49066C7.93862 4.93689 8.85128 4.53836 9.8095 4.31843C8.55008 4.7034 7.41291 5.40382 6.49076 6.33779C6.71539 5.96774 6.97765 5.62219 7.27084 5.30474C6.36228 6.18653 5.66897 7.26333 5.25522 8.46764C5.31334 8.33316 5.37532 8.20066 5.44099 8.07031C3.93189 10.4258 3.54114 13.5228 4.56401 16.414C5.00538 17.626 5.74269 18.6919 6.69635 19.5271C4.3983 17.8367 3 15.0865 3 12C3 11.9526 3.00032 11.9053 3.00095 11.8579C3.00032 11.9053 3 11.9526 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.823 21 11.6474 20.9942 11.4734 20.9828C11.6474 20.9942 11.823 21 12 21C12.1389 21 12.2767 20.9967 12.4136 20.9902C8.76772 20.8009 5.76682 18.1975 4.95834 14.7709C5.15932 15.2235 5.40562 15.655 5.6919 16.0611C5.81834 16.2479 5.9531 16.4296 6.09582 16.6058C7.1257 17.9273 8.54047 18.9351 10.178 19.4816C8.1252 19.3112 6.21431 18.615 4.61591 17.5094C3.59536 16.8149 2.70168 15.9472 1.96762 14.9497C3.09333 17.2049 4.97267 19.0264 7.33873 19.9228C5.95495 19.1339 4.80713 18.0063 3.99066 16.6619C5.80305 20.0295 9.25566 22.186 13.1858 22.186C17.8797 22.186 21.746 18.7463 22.3117 14.1858C22.3117 14.1858 22.5 13 21.5 12.5C20.5 12 19.9276 13.1858 19.9276 13.1858C19.9276 13.1858 19.8405 13.4661 19.8155 13.5486C19.0947 16.8689 16.1494 19.3333 12.6536 19.3333C12.5023 19.3333 12.3519 19.3284 12.2024 19.3189C15.5223 19.222 18.3333 16.7419 18.9822 13.5486C18.9904 13.5124 19 13.4765 19 13.4407C19 13.1477 18.7761 12.9407 18.5 12.9407C18.2239 12.9407 18 13.1477 18 13.4407C18 16.4357 15.5376 18.8889 12.5 18.8889C9.46243 18.8889 7 16.4357 7 13.4407C7 10.4458 9.46243 7.99259 12.5 7.99259C15.5376 7.99259 18 10.4458 18 13.4407C18 13.4765 17.9904 13.5124 17.9822 13.5486C17.9644 13.6342 17.5 15 16 15C14.5 15 14.0613 13.5486 14.0613 13.5486C14.0613 13.5486 14.9429 19.3333 20.5 19C20.9968 18.9653 21.479 18.8889 21.9445 18.7728C17.2628 22.7946 10.0913 22.749 5.87546 18.1221C8.79696 21.2342 13.6212 21.761 17.1858 19.4759C14.2317 21.3031 10.3732 21.5221 7.18665 19.6117C8.31312 20.4133 9.65328 20.9396 11.0943 21.1194C7.25943 21.7078 4 18.5224 4 14.6667C4 13.5593 4.2573 12.507 4.71937 11.568C4.58553 12.3567 4.5156 13.1668 4.5156 13.9907C4.5156 16.9139 5.55894 19.5765 7.28569 21.5871C3.15117 18.7692 1.18802 13.3737 3.21085 8.68657C3.27935 8.5396 3.35273 8.39508 3.43089 8.25317C1.53616 11.0651 1.26427 14.879 3.43936 17.9789" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="analytics-data">
+                      <span class="analytics-value">0</span>
+                    </div>
+                  </div>
+          
+                  <div class="analytics-card">
+                    <div class="analytics-icon lightning">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M13 9H21L11 24V15H4L13 0V9ZM11 11V7.22L7.532 13H13V17.394L17.263 11H11Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="analytics-data">
+                      <span class="analytics-value">0</span>
+                    </div>
+                  </div>
+          
+                  <div class="analytics-card">
+                    <div class="analytics-icon book">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M21 18H6C3.79086 18 2 16.2091 2 14V8C2 5.79086 3.79086 4 6 4H21V18ZM21 20V21H6C2.68629 21 0 18.3137 0 15V8C0 4.68629 2.68629 2 6 2H21C22.1046 2 23 2.89543 23 4V18C23 19.1046 22.1046 20 21 20ZM17 7H20V9H17V7ZM15 7C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9H8C7.44772 9 7 8.55228 7 8C7 7.44772 7.44772 7 8 7H15ZM17 11H20V13H17V11ZM15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H8C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11H15Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="analytics-data">
+                      <span class="analytics-value">0</span>
+                    </div>
+                  </div>
+          
+                  <div class="analytics-card">
+                    <div class="analytics-icon book-alt">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M20 22H6.5C4.01472 22 2 19.9853 2 17.5C2 15.0147 4.01472 13 6.5 13H22V4C22 3.44772 21.5523 3 21 3H6.5C5.67157 3 5 3.67157 5 4.5V15.7381C4.36286 15.2722 3.69476 14.8786 3 14.573V4.5C3 2.567 4.567 1 6.5 1H21C22.6569 1 24 2.34315 24 4V17.5C24 19.9853 21.9853 22 19.5 22H6.5C5.1193 22 4 20.8807 4 19.5C4 18.1193 5.1193 17 6.5 17H20V15H6.5C5.11929 15 4 16.1193 4 17.5C4 18.8807 5.11929 20 6.5 20H19.5C20.8807 20 22 18.8807 22 17.5V15.7381C21.3629 15.2722 20.6948 14.8786 20 14.573V20Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="analytics-data">
+                      <span class="analytics-value">0</span>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Achievements Section -->
+                <div class="achievements-section">
+                  <div class="section-header">
+                    <h2 class="section-title">Pecapaian</h2>
+                    <a href="#" class="see-all-link">Lihat Semua</a>
+                  </div>
+                  <div class="achievements-grid">
+                    <div class="achievement-card empty">
+                      <div class="achievement-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M13 1L13.001 4.06221C16.6192 4.51365 19.4867 7.38166 19.9381 11H23V13H19.938C19.4864 16.6184 16.6183 19.4866 12.9999 19.938L13 23H11L10.999 19.9378C7.38078 19.4863 4.51334 16.6183 4.06189 13H1V11H4.06193C4.51337 7.38078 7.38138 4.51334 11 4.06189L11 1H13ZM12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="currentColor"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="achievement-card empty">
+                      <div class="achievement-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M13 1L13.001 4.06221C16.6192 4.51365 19.4867 7.38166 19.9381 11H23V13H19.938C19.4864 16.6184 16.6183 19.4866 12.9999 19.938L13 23H11L10.999 19.9378C7.38078 19.4863 4.51334 16.6183 4.06189 13H1V11H4.06193C4.51337 7.38078 7.38138 4.51334 11 4.06189L11 1H13ZM12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="currentColor"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="achievement-card empty">
+                      <div class="achievement-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M13 1L13.001 4.06221C16.6192 4.51365 19.4867 7.38166 19.9381 11H23V13H19.938C19.4864 16.6184 16.6183 19.4866 12.9999 19.938L13 23H11L10.999 19.9378C7.38078 19.4863 4.51334 16.6183 4.06189 13H1V11H4.06193C4.51337 7.38078 7.38138 4.51334 11 4.06189L11 1H13ZM12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="currentColor"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="achievement-card empty">
+                      <div class="achievement-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path d="M13 1L13.001 4.06221C16.6192 4.51365 19.4867 7.38166 19.9381 11H23V13H19.938C19.4864 16.6184 16.6183 19.4866 12.9999 19.938L13 23H11L10.999 19.9378C7.38078 19.4863 4.51334 16.6183 4.06189 13H1V11H4.06193C4.51337 7.38078 7.38138 4.51334 11 4.06189L11 1H13ZM12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="currentColor"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+    
+</body>
+</html>
+
+<style>
+  /* Futuristic Profile Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.profile-section {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Pattern */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Profile Card */
+.profile-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 
+              0 1px 8px rgba(0, 0, 0, 0.03),
+              0 0 0 1px rgba(209, 213, 219, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Edit Button */
+.edit-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.edit-button:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.profile-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.avatar-border {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.online-status {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #10b981;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #111827;
+}
+
+.profile-username {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6366f1;
+  margin: 0 0 0.75rem 0;
+}
+
+.profile-join-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Profile Stats */
+.profile-stats {
+  display: flex;
+  align-items: center;
+  background-color: rgba(243, 244, 246, 0.8);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: #e5e7eb;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 2rem 0 1rem 0;
+}
+
+/* Analytics Grid */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.analytics-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.analytics-icon.fire {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+}
+
+.analytics-icon.lightning {
+  background: linear-gradient(135deg, #eab308, #f59e0b);
+}
+
+.analytics-icon.book {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.analytics-icon.book-alt {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.analytics-data {
+  flex-grow: 1;
+}
+
+.analytics-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  display: block;
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin-top: 2rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.see-all-link {
+  font-size: 0.875rem;
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-card {
+  background-color: white;
+  border-radius: 12px;
+  aspect-ratio: 1/1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 0.7);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-card.empty {
+  background-color: rgba(243, 244, 246, 0.5);
+  border: 1px dashed #d1d5db;
+}
+
+.achievement-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-avatar {
+    margin-bottom: 1rem;
+  }
+  
+  .analytics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-divider {
+    width: 80%;
+    height: 1px;
+  }
+  
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
