@@ -1,665 +1,549 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sifu AI</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
     <!-- Import model-viewer component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a  href="index.html">Home</a></li>
-            <li><a  href="#">AI Chat</a></li>
-            <li><a  href="#">Akun</a></li>
-            <li><a  href="login.html">Login</a></li>
-
-        </ul>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">AI Chat</a></li>
+        <li><a href="#">Akun</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <!-- Background Gradient -->
-            <div class="hero-bg"></div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- Background Gradient -->
+        <div class="hero-bg"></div>
 
-            <!-- Floating Elements -->
-            <div class="floating-elements">
-                <div class="floating-circle c1"></div>
-                <div class="floating-circle c2"></div>
-                <div class="floating-circle c3"></div>
-            </div>
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+          <div class="floating-circle c1"></div>
+          <div class="floating-circle c2"></div>
+          <div class="floating-circle c3"></div>
+        </div>
 
-            <!-- 3D Model -->
-            <div class="model-container" style="top: 65%">
-                <model-viewer src="./img/humanoid.glb" alt="Model 3D Humanoid" auto-rotate disable-zoom
-                    camera-orbit="0deg 75deg 105%" min-camera-orbit="auto auto 105%" max-camera-orbit="auto auto 105%"
-                    rotation-per-second="5deg" exposure="1" shadow-intensity="1" shadow-softness="1"
-                    environment-image="neutral">
-                </model-viewer>
-            </div>
+        <!-- 3D Model -->
+        <div class="model-container" style="top: 65%">
+          <model-viewer
+            src="./img/humanoid.glb"
+            alt="Model 3D Humanoid"
+            auto-rotate
+            disable-zoom
+            camera-orbit="0deg 75deg 105%"
+            min-camera-orbit="auto auto 105%"
+            max-camera-orbit="auto auto 105%"
+            rotation-per-second="5deg"
+            exposure="1"
+            shadow-intensity="1"
+            shadow-softness="1"
+            environment-image="neutral"
+          >
+          </model-viewer>
+        </div>
 
-            <!-- Text Content -->
-            <div class="hero-text">
-                <div>
-                    <h1>CONQUER THE FUTURE.
-                    </h1>
+        <!-- Text Content -->
+        <div class="hero-text">
+          <div>
+            <h1>CONQUER THE FUTURE.</h1>
 
-                    <div class="hero-small-cards">
-                        <div class="left-cards">
-                            <!-- Card 1 -->
-                            <div class="hero-small-card">
-                                <div class="card-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-number">100.000.000</span>
-                                    <span class="card-text">orang mengunduh</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="#" class="shop-btn">Mulai Belajar</a>
-
-                        <div class="right-cards">
-                            <!-- Card 2 -->
-                            <div class="hero-small-card">
-                                <div class="card-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-number">4.8</span>
-                                    <span class="card-text">Kepuasan Pelanggan</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <!-- section 2 -->
-        <section class="quantum_section">
-
-
-            <div class="cyber_bg"></div>
-            <div class="grid_lines"></div>
-
-            <div class="content_wrapper">
-                <div class="neo_container">
-                    <h1 class="alpha_heading">ABOUT <span class="alpha_heading-US"> US</span></h1>
-
-                    <div class="quantum_grid">
-                        <div class="cyber_card">
-                            <div class="pulse_icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                                </svg>
-                            </div>
-                            <h2 class="neon_title">Visi dan Misi</h2>
-                            <p class="ghost_text">Exploring the frontiers of technological innovation, our team combines
-                                cutting-edge AI research with practical applications to revolutionize how humans and
-                                machines interact.</p>
-                            <a href="#" class="expand_link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M7 17l10-10M7 7h10v10" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="dual_grid">
-                        <div class="cyber_card">
-                            <div class="pulse_icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                                </svg>
-                            </div>
-                            <h2 class="neon_title">TEXT ABOUT US NYA</h2>
-                            <p class="ghost_text">Our mission is to create intelligent systems that augment human
-                                capabilities while ensuring ethical AI development and deployment.</p>
-                            <a href="#" class="expand_link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M7 17l10-10M7 7h10v10" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div class="cyber_card">
-                            <div class="pulse_icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
-                                </svg>
-                            </div>
-                            <h2 class="neon_title">TEXT ABOUT US NYA</h2>
-                            <p class="ghost_text">With a focus on robotic integration and neural interface technologies,
-                                we're building the foundation for the next generation of human-machine collaboration.
-                            </p>
-                            <a href="#" class="expand_link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M7 17l10-10M7 7h10v10" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="model_wrapper">
-                <div class="model_container">
-                    <div class="model_glow"></div>
-                    <!-- 3D Model Viewer using Google's model-viewer -->
-                    <model-viewer src="./img/humanoid.glb" alt="A 3D model of a robot" auto-rotate shadow-intensity="1"
-                        environment-image="neutral" exposure="0.8">
-                    </model-viewer>
-                </div>
-            </div>
-        </section>
-
-        <!-- section 3-->
-        <section class="ai-power-showcase">
-            <div class="section-header">
-                <h2>TOP <span class="AI-section-header">AI</span> AGEN</h2>
-            </div>
-            <div class="showcase-grid">
+            <div class="hero-small-cards">
+              <div class="left-cards">
                 <!-- Card 1 -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="./img/robot.png" alt="TOP AI AGEN">
-                    </div>
-                    <h3 class="showcase-title">TOP AI AGEN</h3>
-                    <a href="#" class="showcase-button">LET'S SEE MORE</a>
+                <div class="hero-small-card">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-number">100.000.000</span>
+                    <span class="card-text">orang mengunduh</span>
+                  </div>
                 </div>
+              </div>
 
-                <!-- Card 2 (Featured/Larger) -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="./img/robot.png" alt="TOP AI AGEN">
-                    </div>
-                    <h3 class="showcase-title">TOP AI AGEN</h3>
-                    <a href="#" class="showcase-button">LET'S SEE MORE</a>
-                </div>
+              <a href="#" class="shop-btn">Mulai Belajar</a>
 
-                <!-- Card 3 -->
-                <div class="showcase-card">
-                    <div class="showcase-image">
-                        <img src="./img/robot.png" alt="TOP AI AGEN">
-                    </div>
-                    <h3 class="showcase-title">TOP AI AGEN</h3>
-                    <a href="#" class="showcase-button">LET'S SEE MORE</a>
+              <div class="right-cards">
+                <!-- Card 2 -->
+                <div class="hero-small-card">
+                  <div class="card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="card-content">
+                    <span class="card-number">4.8</span>
+                    <span class="card-text">Kepuasan Pelanggan</span>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-
-
-
-        <!-- section 4 -->
-        <section class="teacher-section">
-            <div class="section-container">
-                <div class="section-header">
-                    <h2>MEET OUR AI <span class="highlight">TEACHER!</span></h2>
-                    <div class="underline"></div>
-                    <a href="#" class="more-btn">LET'S SEE MORE</a>
-                </div>
-
-                <div class="cards-container">
-                    <!-- Card 1 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>QUILLBOT</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>CHATGPT</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            AI pintar yang dapat membantu dalam pembelajaran dan menjawab berbagai pertanyaan.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - ChatGPT" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>MIDJOURNEY</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Menghasilkan gambar berkualitas tinggi dari deskripsi teks.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Midjourney" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>DALL-E</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Membuat gambar kreatif dari deskripsi teks dengan teknologi AI.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - DALL-E" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>STABLE DIFFUSION</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Menghasilkan gambar AI dengan kustomisasi yang lebih mendalam.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Stable Diffusion" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>BARD</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Asisten AI dari Google untuk membantu berbagai tugas kreatif.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Bard" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>CLAUDE</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            AI canggih untuk analisis dan pemecahan masalah kompleks.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Claude" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>COPILOT</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Asisten coding AI untuk membantu pengembangan software.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - Copilot" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Additional Cards -->
-                    <!-- Card 9 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>NEW AI 1</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Deskripsi untuk AI baru 1.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - New AI 1" class="robot-image">
-                        </div>
-                    </div>
-
-                    <!-- Card 10 -->
-                    <div class="teacher-card">
-                        <div class="card-header">
-                            <h3>NEW AI 2</h3>
-                            <a href="#" class="card-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                        <p class="card-desc">
-                            Deskripsi untuk AI baru 2.
-                        </p>
-                        <div class="card-image">
-                            <img src="./img/robot.png" alt="AI Teacher - New AI 2" class="robot-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- section  5 -->
-        <section class="trusted-student-section">
-            <h2>OUR TRUSTED STUDENT.</h2>
-            <div class="trusted-student-grid">
-                <!-- CARD 1 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 6 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 7 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD 8 -->
-                <div class="trusted-card">
-                    <div class="quote-icon">“</div>
-                    <p class="quote-text">
-                        AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...
-                    </p>
-                    <div class="profile">
-                        <div class="profile-img"></div>
-                        <div class="profile-info">
-                            <h4>Fakhri Baiqunis</h4>
-                            <span>Murid Kelas 10</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="see-more-wrapper">
-                <button class="see-more-btn">See More</button>
-            </div>
-        </section>
-    </main>
-
-
-    <footer>
-        <div class="footer-content">
-          <!-- Kolom kiri: Nama website + icon sosmed -->
-          <div class="footer-left">
-            <h3>Nama Websitenya</h3>
-            <div class="social-icons">
-              <!-- Ganti # dengan link medsos aslinya -->
-              <a href="#" title="Facebook">&#xf09a;</a> <!-- Icon misal pakai Font Awesome -->
-              <a href="#" title="Email">&#9993;</a>
-              <a href="#" title="Other">&#9875;</a>
-            </div>
-          </div>
-    
-          <!-- Kolom 2: Tentang Website -->
-          <div class="footer-col">
-            <h4>Tentang Website</h4>
-            <p>Deskripsinya</p>
-          </div>
-    
-          <!-- Kolom 3: Kontak Kami -->
-          <div class="footer-col">
-            <h4>Kontak Kami</h4>
-            <p>Deskripsinya</p>
-          </div>
-    
-          <!-- Kolom 4: Ikuti Kami -->
-          <div class="footer-col">
-            <h4>Ikuti Kami</h4>
-            <p>Deskripsinya</p>
           </div>
         </div>
-      </footer>
+      </section>
 
-</body>
-<!-- JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navLinks = document.querySelectorAll('.nav-links li a');
+      <!-- section 2 -->
+      <section class="quantum_section">
+        <div class="cyber_bg"></div>
+        <div class="grid_lines"></div>
 
-        // Set home sebagai active default
-        const homeLink = document.querySelector('.nav-links li a[href="#"]');
-        if (homeLink) homeLink.classList.add('active');
+        <div class="content_wrapper">
+          <div class="neo_container">
+            <h1 class="alpha_heading">ABOUT <span class="alpha_heading-US"> US</span></h1>
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                // Hapus class active dari semua link
-                navLinks.forEach(l => {
-                    l.classList.remove('active');
-                    l.style.setProperty('--after-width', '0');
-                });
+            <div class="quantum_grid">
+              <div class="cyber_card">
+                <div class="pulse_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                  </svg>
+                </div>
+                <h2 class="neon_title">Visi dan Misi</h2>
+                <p class="ghost_text">Exploring the frontiers of technological innovation, our team combines cutting-edge AI research with practical applications to revolutionize how humans and machines interact.</p>
+                <a href="#" class="expand_link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17l10-10M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-                // Tambah class active ke link yang diklik
-                this.classList.add('active');
-                this.style.setProperty('--after-width', '100%');
-            });
+            <div class="dual_grid">
+              <div class="cyber_card">
+                <div class="pulse_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                  </svg>
+                </div>
+                <h2 class="neon_title">TEXT ABOUT US NYA</h2>
+                <p class="ghost_text">Our mission is to create intelligent systems that augment human capabilities while ensuring ethical AI development and deployment.</p>
+                <a href="#" class="expand_link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17l10-10M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="cyber_card">
+                <div class="pulse_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
+                  </svg>
+                </div>
+                <h2 class="neon_title">TEXT ABOUT US NYA</h2>
+                <p class="ghost_text">With a focus on robotic integration and neural interface technologies, we're building the foundation for the next generation of human-machine collaboration.</p>
+                <a href="#" class="expand_link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17l10-10M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="model_wrapper">
+          <div class="model_container">
+            <div class="model_glow"></div>
+            <!-- 3D Model Viewer using Google's model-viewer -->
+            <model-viewer src="./img/humanoid.glb" alt="A 3D model of a robot" auto-rotate shadow-intensity="1" environment-image="neutral" exposure="0.8"> </model-viewer>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 3-->
+      <section class="ai-power-showcase">
+        <div class="section-header">
+          <h2>TOP <span class="AI-section-header">AI</span> AGEN</h2>
+        </div>
+        <div class="showcase-grid">
+          <!-- Card 1 -->
+          <div class="showcase-card">
+            <div class="showcase-image">
+              <img src="./img/robot.png" alt="TOP AI AGEN" />
+            </div>
+            <h3 class="showcase-title">TOP AI AGEN</h3>
+            <a href="#" class="showcase-button">LET'S SEE MORE</a>
+          </div>
+
+          <!-- Card 2 (Featured/Larger) -->
+          <div class="showcase-card">
+            <div class="showcase-image">
+              <img src="./img/robot.png" alt="TOP AI AGEN" />
+            </div>
+            <h3 class="showcase-title">TOP AI AGEN</h3>
+            <a href="#" class="showcase-button">LET'S SEE MORE</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="showcase-card">
+            <div class="showcase-image">
+              <img src="./img/robot.png" alt="TOP AI AGEN" />
+            </div>
+            <h3 class="showcase-title">TOP AI AGEN</h3>
+            <a href="#" class="showcase-button">LET'S SEE MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 4 -->
+      <section class="teacher-section">
+        <div class="section-container">
+          <div class="section-header">
+            <h2 class="meet-our">MEET OUR AI <span class="highlight">TEACHER!</span></h2>
+            <div class="underline"></div>
+            <a href="#" class="more-btn">LET'S SEE MORE</a>
+          </div>
+
+          <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>QUILLBOT</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">membantu dalam pemeriksaan plagiarisme, penulisan ulang tata bahasa, dan pembuatan tulisan.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Quillbot" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>CHATGPT</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">AI pintar yang dapat membantu dalam pembelajaran dan menjawab berbagai pertanyaan.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - ChatGPT" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>MIDJOURNEY</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Menghasilkan gambar berkualitas tinggi dari deskripsi teks.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Midjourney" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>DALL-E</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Membuat gambar kreatif dari deskripsi teks dengan teknologi AI.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - DALL-E" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>STABLE DIFFUSION</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Menghasilkan gambar AI dengan kustomisasi yang lebih mendalam.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Stable Diffusion" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>BARD</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Asisten AI dari Google untuk membantu berbagai tugas kreatif.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Bard" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>CLAUDE</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">AI canggih untuk analisis dan pemecahan masalah kompleks.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Claude" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>COPILOT</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Asisten coding AI untuk membantu pengembangan software.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - Copilot" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Additional Cards -->
+            <!-- Card 9 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>NEW AI 1</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Deskripsi untuk AI baru 1.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - New AI 1" class="robot-image" />
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="teacher-card">
+              <div class="card-header">
+                <h3>NEW AI 2</h3>
+                <a href="#" class="card-link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <p class="card-desc">Deskripsi untuk AI baru 2.</p>
+              <div class="card-image">
+                <img src="./img/robot.png" alt="AI Teacher - New AI 2" class="robot-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section  5 -->
+      <section class="trusted-student-section">
+        <h2>OUR TRUSTED STUDENT.</h2>
+        <div class="trusted-student-grid">
+          <!-- CARD 1 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 7 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 8 -->
+          <div class="trusted-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">AUAFAFUIABSIHFBIABFIBAI... (testimoni siswa) ...</p>
+            <div class="profile">
+              <div class="profile-img"></div>
+              <div class="profile-info">
+                <h4>Fakhri Baiqunis</h4>
+                <span>Murid Kelas 10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="see-more-wrapper">
+          <button class="see-more-btn">See More</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <!-- Kolom kiri: Nama website + icon sosmed -->
+        <div class="footer-left">
+          <h3>Nama Websitenya</h3>
+          <div class="social-icons">
+            <!-- Ganti # dengan link medsos aslinya -->
+            <a href="#" title="Facebook">&#xf09a;</a>
+            <!-- Icon misal pakai Font Awesome -->
+            <a href="#" title="Email">&#9993;</a>
+            <a href="#" title="Other">&#9875;</a>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Tentang Website -->
+        <div class="footer-col">
+          <h4>Tentang Website</h4>
+          <p>Deskripsinya</p>
+        </div>
+
+        <!-- Kolom 3: Kontak Kami -->
+        <div class="footer-col">
+          <h4>Kontak Kami</h4>
+          <p>Deskripsinya</p>
+        </div>
+
+        <!-- Kolom 4: Ikuti Kami -->
+        <div class="footer-col">
+          <h4>Ikuti Kami</h4>
+          <p>Deskripsinya</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".nav-links li a");
+
+      // Set home sebagai active default
+      const homeLink = document.querySelector('.nav-links li a[href="#"]');
+      if (homeLink) homeLink.classList.add("active");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          // Hapus class active dari semua link
+          navLinks.forEach((l) => {
+            l.classList.remove("active");
+            l.style.setProperty("--after-width", "0");
+          });
+
+          // Tambah class active ke link yang diklik
+          this.classList.add("active");
+          this.style.setProperty("--after-width", "100%");
         });
+      });
     });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const container = document.querySelector('.cards-container');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        // Handle manual scrolling
-        container.addEventListener('mousedown', (e) => {
-            isDown = true;
-            container.style.cursor = 'grabbing';
-            startX = e.pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
-        });
-
-        container.addEventListener('mouseleave', () => {
-            isDown = false;
-            container.style.cursor = 'grab';
-        });
-
-        container.addEventListener('mouseup', () => {
-            isDown = false;
-            container.style.cursor = 'grab';
-        });
-
-        container.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - container.offsetLeft;
-            const walk = (x - startX) * 2;
-            container.scrollLeft = scrollLeft - walk;
-        });
-    });
-</script>
-
-
+  </script>
 </html>
