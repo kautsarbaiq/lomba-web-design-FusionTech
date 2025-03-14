@@ -6,8 +6,18 @@
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, #e0e0e5 50%, #e0e0e5 100%);
-  background-image: linear-gradient(135deg, #ffffff 0%, #e0e0e5 50%, #c0c0c5 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(255, 255, 255) 0%,
+    #e0e0e5 50%,
+    #e0e0e5 100%
+  );
+  background-image: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #e0e0e5 50%,
+    #c0c0c5 100%
+  );
   color: #121212;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -27,7 +37,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: none;
   z-index: 50;
@@ -61,7 +72,12 @@ body {
   left: 50%;
   width: var(--after-width);
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
   transform: translateX(-50%);
   transition: width 0.4s ease;
 }
@@ -96,14 +112,6 @@ body {
 .nav-links li a:active {
   transform: scale(0.95);
   transition: transform 0.1s ease;
-}
-
-/* Style untuk menu yang aktif selain home */
-.nav-links li a.active:not([href="#"]) {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 .nav-links li a.active:not([href="#"])::after {
@@ -178,7 +186,12 @@ body {
   height: 100%;
   background-size: 40px 40px;
   opacity: 0.05;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
 }
 
 .hero-bg::after {
@@ -186,7 +199,11 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 30% 50%, rgba(220, 220, 240, 0.5) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(220, 220, 240, 0.5) 0%,
+    transparent 60%
+  );
 }
 
 /* 3D Model */
@@ -616,7 +633,11 @@ model-viewer::part(default-progress-mask) {
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(202, 191, 191), rgb(255, 255, 255));
+  background: linear-gradient(
+    to bottom,
+    rgb(202, 191, 191),
+    rgb(255, 255, 255)
+  );
   opacity: 0.8;
 }
 
@@ -696,7 +717,12 @@ model-viewer::part(default-progress-mask) {
   position: absolute;
   height: 2px;
   width: 150px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
   animation: pulse 3s infinite;
   opacity: 0.7;
 }
@@ -764,10 +790,10 @@ model-viewer::part(default-progress-mask) {
 
 /* section 333333333333333333333333333 */
 .ai-power-showcase {
-  padding: 30px 0;
+  padding: 20px 0;
   position: relative;
   overflow: hidden;
-  min-height: 100%;
+  max-height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -783,7 +809,12 @@ model-viewer::part(default-progress-mask) {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgb(255, 255, 255) 0%, #e0e0e5 50%, #e0e0e5 100%);
+  background: linear-gradient(
+    to top,
+    rgb(255, 255, 255) 0%,
+    #e0e0e5 50%,
+    #e0e0e5 100%
+  );
   pointer-events: none;
 }
 .ai::after {
@@ -791,7 +822,11 @@ model-viewer::part(default-progress-mask) {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 30% 50%, rgba(220, 220, 240, 0.5) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(220, 220, 240, 0.5) 0%,
+    transparent 60%
+  );
 }
 
 .ai-power-showcase .section-header {
@@ -853,7 +888,7 @@ model-viewer::part(default-progress-mask) {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 px;
 }
 
 .showcase-card {
@@ -866,7 +901,7 @@ model-viewer::part(default-progress-mask) {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   transition: all 0.4s ease;
-  height: 700px;
+  height: 500px;
   width: 100%;
   max-width: 350px;
   margin: 0 auto;
@@ -888,7 +923,7 @@ model-viewer::part(default-progress-mask) {
 }
 
 .showcase-card:nth-child(2) {
-  height: 750px;
+  height: 550px;
   transform: translateY(-25px);
   background: rgb(0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -983,7 +1018,7 @@ model-viewer::part(default-progress-mask) {
 .teacher-section {
   /* background-color: red; */
   background: linear-gradient(to bottom, #ffffff 0%, #f0f0f5 50%, #e0e0e5 100%);
-  padding: 100px 0;
+  padding: px 0;
   overflow: hidden;
   position: relative;
 }
@@ -1004,10 +1039,11 @@ model-viewer::part(default-progress-mask) {
   text-align: center;
   margin-bottom: 40px;
   padding: 0 20px;
+  margin-top: 50px;
 }
 
 .section-header h2 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #000;
   background: linear-gradient(to right, #000, #333);
@@ -1193,7 +1229,11 @@ model-viewer::part(default-progress-mask) {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(220, 220, 240, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(220, 220, 240, 0.1) 0%,
+    transparent 70%
+  );
   top: -200px;
   right: -200px;
   z-index: 0;
@@ -1205,7 +1245,11 @@ model-viewer::part(default-progress-mask) {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(220, 220, 240, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(220, 220, 240, 0.1) 0%,
+    transparent 70%
+  );
   bottom: -100px;
   left: -100px;
   z-index: 0;
@@ -1311,7 +1355,12 @@ model-viewer::part(default-progress-mask) {
 
 /* CARD STYLING */
 .trusted-card {
-  background: linear-gradient(135deg, rgb(255, 255, 255) 0%, #e0e0e5 50%, #e0e0e5 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(255, 255, 255) 0%,
+    #e0e0e5 50%,
+    #e0e0e5 100%
+  );
   border-radius: 20px;
   padding: 25px;
   width: 100%;
@@ -1660,4 +1709,4 @@ model-viewer::part(default-progress-mask) {
   justify-content: center;
 }
 
-/* akun page */
+/* AI Chat page */
