@@ -1435,6 +1435,7 @@ model-viewer::part(default-progress-mask) {
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.25s ease, background-color 0.25s ease;
+  justify content: center;
 }
 
 .see-more-btn:hover {
@@ -1500,7 +1501,7 @@ model-viewer::part(default-progress-mask) {
 }
 
 .icon-star-footer {
-  color: #a855f7;
+  color: #000000ff;
   margin-right: 0.5rem;
   transition: color 0.3s ease;
 }
@@ -1536,7 +1537,7 @@ model-viewer::part(default-progress-mask) {
 }
 
 .social-link:hover {
-  background-color: #a855f7;
+  background-color: #000000ff;
   color: white;
   transform: translateY(-3px);
 }
@@ -1568,7 +1569,7 @@ model-viewer::part(default-progress-mask) {
   bottom: 0;
   width: 30px;
   height: 2px;
-  background-color: #a855f7;
+  background-color: #000000ff;
 }
 
 .footer-col ul {
